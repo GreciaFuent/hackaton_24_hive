@@ -1,0 +1,80 @@
+.nota {
+    width: 300px;
+    min-height: 100px;
+    max-height: 250px;
+    padding: 20px;
+    border: 2px dashed #999999;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    margin-top: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.nota .nota-description {
+    max-width: 85%;
+}
+
+.nota .delete-note-btn {
+    border: none;
+    float: right;
+}
+
+.nota .delete-note-btn svg{
+    font-size: 1rem;
+    color: #1d1d1b;
+}
+
+.nota:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+
+@media (max-width: 500px) {
+    .nota {
+        width: 90%;
+        min-height: 100px;
+        grid-template-columns: 1fr;gap: 10px;
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+}
+
+
+.nota .nota-description {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.nota .date-details {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.nota .day {
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+
+.nota .month {
+    font-size: 12px;
+    color: #777;
+    background-color: #f9f9f9;
+}

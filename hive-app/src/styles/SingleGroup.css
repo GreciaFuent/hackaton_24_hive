@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400&family=Merriweather:ital,wght@0,300;1,300&family=Newsreader:wght@200;300;400&family=Open+Sans:ital,wght@1,300&family=Poppins:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #EEEEEE;
+    font-family: 'Poppins', sans-serif, 'Open Sans', sans-serif, 'Newsreader', serif, 'Hanuman', serif, 'Merriweather', serif;
+}
+
+.sigle_group {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    color: #1d1d1b;
+    background-color: #EEEEEE;
+    padding-bottom: 3rem;
+    padding: 0 2rem;
+}
+
+.sigle_group .info_grupo {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.sigle_group .info_grupo h1 {
+    min-width: 59%;
+    max-width: 60%;
+    font-size: 28px;
+    min-height: 85px;
+    max-height: 100px;
+}
+
+.sigle_group .info_grupo ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 37%;
+    max-width: 37%;
+    background-color: #EEEEEE;
+}
+
+.sigle_group ul li {
+    list-style: none;
+    margin: .3rem;
+}
+
+.sigle_group ul li button {
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #EEEEEE;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #222831;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #222831;
+}
+
+/* Estilos para pantallas grandes (desde 900px) */
+@media (min-width: 900px) {
+    .sigle_group {
+        padding: 2rem 4rem;
+    }
+
+    .modal-content {
+        width: 400px;
+    }
+
+    .sigle_group .info_grupo h1 {
+        font-size: 40px;
+    }
+
+    .grupo-title {
+        font-size: 22px;
+    }
+
+    .grupo-content {
+        font-size: 18px;
+    }
+
+    .grupos .crear-grupo-btn {
+        min-width: 15rem;
+        max-width: 5rem;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px 0 27px 0;
+    }
+
+    .sigle_group .info_grupo {
+        justify-content: space-between;
+    }
+
+    .sigle_group .info_grupo ul {
+        justify-content: flex-end;
+    }
+
+    .sigle_group .info_grupo ul li svg {
+        font-size: 2.4rem;
+    }
+
+    .eventos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400&family=Merriweather:ital,wght@0,300;1,300&family=Newsreader:wght@200;300;400&family=Open+Sans:ital,wght@1,300&family=Poppins:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif, 'Open Sans', sans-serif, 'Newsreader', serif, 'Hanuman', serif, 'Merriweather', serif;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  color: #1d1d1b;
+  background-color: #EEEEEE;
+  padding-bottom: 0 4em 3rem 4em;
+}
+
+.login h1 {
+  text-align: center;
+}
+
+.login .elementos_registro ul li{
+  list-style: none;
+}
+
+.elementos_registro {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+  
+.elementos_registro .titulo {
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.elementos_registro form {
+  background-color: white;
+}
+
+.elementos_registro ul {
+  list-style: none;
+  padding: 0;
+  background-color: white;
+}
+
+.elementos_registro li {
+  margin-bottom: 15px;
+  background-color: white;
+}
+.elementos_registro label {
+  background-color: white;
+}
+
+.elementos_registro input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.elementos_registro button {
+  padding: 10px 20px;
+  background-color: #222831;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.elementos_registro .button_registrar {
+  float: right;
+  margin-bottom: 1rem;
+}
+.elementos_registro .button_ingresar {
+  float: left;
+  margin-bottom: 1rem;
+}
+
+.elementos_registro button:hover {
+  background-color: #222831;
+}
+
+
+@media (max-width: 500px) {
+  .login {
+    padding: 0 3rem;
+  }
+}
+
+
+@media (min-width: 900px) {
+  .login {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .elementos_registro {
+    width: 400px;
+    padding: 40px; 
+  }
+  .login h1 {
+    font-size: 2rem;
+  }
+
+  .elementos_registro button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+  .elementos_registro .button_registrar,
+  .elementos_registro .button_ingresar {
+    float: none;
+    display: inline-block;
+    margin: 0 10px 1rem 0;
+  }
+}
+  

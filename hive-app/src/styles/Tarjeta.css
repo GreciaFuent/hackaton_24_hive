@@ -1,0 +1,81 @@
+.tarjeta-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tarjeta {
+    width: 300px; 
+    min-height: 275px;
+    max-height: 325px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto; 
+}
+
+.tarjeta .grupo-fecha {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+    text-align: left;
+    min-height: 36px;
+    max-height: 37px;
+    background-color: white;
+}
+
+.tarjeta h1 {
+    font-size: 18px;
+    margin: 20px 0 10px 0;
+    text-align: left;
+    min-height: 54px;
+    max-height: 55px;
+    background-color: white;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 20px;
+    min-height: 90px;
+    max-height: 92px;
+    background-color: white;
+}
+
+.tarjeta .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    background-color: white;
+    min-height: 18px;
+    max-height: 19px;
+}
+
+.tarjeta .footer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.tarjeta .footer span {
+    font-size: 12px;
+    color: #555;
+    background-color: white;
+}
+
+.tarjeta-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tarjeta-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}

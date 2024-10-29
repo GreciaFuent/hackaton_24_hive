@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400&family=Merriweather:ital,wght@0,300;1,300&family=Newsreader:wght@200;300;400&family=Open+Sans:ital,wght@1,300&family=Poppins:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #EEEEEE;
+    font-family: 'Poppins', sans-serif, 'Open Sans', sans-serif, 'Newsreader', serif, 'Hanuman', serif, 'Merriweather', serif;
+}
+
+.calendario {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    color: #1d1d1b;
+    background-color: #EEEEEE;
+    padding-bottom: 3rem;
+    padding: 0 2rem;
+    padding-bottom: 4rem;
+}
+
+.calendario .titulo {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.calendario .filters {
+    display: flex;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.calendario .filters label {
+    margin: 5px 0;
+}
+
+.calendario .filters select {
+    background-color: #f0f0f0;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.calendario .main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between; /* Cambiado para espacio entre elementos */
+    gap: 90px; /* Espacio entre contenedores */
+}
+
+.calendario .calendar-container {
+    background-color: #EEEEEE;
+    flex: 1;
+}
+
+.calendario .calendar-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.calendario .calendar-navigation span {
+    font-weight: bold;
+}
+
+.calendario .calendar-navigation button {
+    margin: 0 20px;
+    background-color: #222831; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.calendario .calendar-navigation button:hover {
+    background-color: #222831; /* Color de fondo al pasar el mouse */
+}
+
+/* Nuevo contenedor elevado para el calendario */
+.calendario .calendar-frame {
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra alrededor del cuadro */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s;
+}
+
+/* Sombra adicional al pasar el mouse por el cuadro */
+.calendario .calendar-frame:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Encabezado de días de la semana */
+.calendario .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.calendario .weekday {
+    background-color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Contenedor de los días del calendario */
+.calendario .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    background-color: transparent;
+}
+
+.calendario .calendar-day {
+    padding: 10px;
+    background-color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendario .calendar-day span {
+    background-color: #ffffff;
+}
+
+.calendario .calendar-day:hover {
+    background-color: #dcdcdc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.calendario .calendar-day:hover span{
+    background-color: #dcdcdc;
+}
+
+.calendario .event-day {
+    background-color: #ffdddd;
+    border: 2px solid #ff8888;
+}
+
+.calendario .event-day span{
+    background-color: #ffdddd;
+}
+
+.calendario .event-details {
+    padding: 90px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-left: 40px;
+}
+
+.calendario .event-details h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Para pantallas de 0 a 500 px */
+@media (max-width: 500px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .calendar-day {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filters label,
+    .filters select {
+        font-size: 14px;
+    }
+
+    event-details {
+        max-height: 300px;
+    }
+}
+
+/* Para pantallas de 500px a 900px */
+@media (min-width: 501px) and (max-width: 899px) {
+    .calendario {
+        display: none;
+    }
+    .no-format-message {
+        display: block;
+    }
+}
+
+/* En Calendario.css */
+.no-format-message {
+    background-color: #ffdddd; /* Fondo rojo claro */
+    color: #d9534f; /* Color de texto rojo oscuro */
+    padding: 15px;
+    border: 1px solid #d9534f; /* Borde en color similar */
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 300px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Para pantallas de 900px en adelante */
+@media (min-width: 900px) {
+    .main-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .calendar-day {
+        padding: 10px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "/hive-app/src/routes/server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/hive-app/src/routes/server.js" }
+    ]
+  }
